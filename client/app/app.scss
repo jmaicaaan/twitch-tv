@@ -1,32 +1,7 @@
 @import "common/common";
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~angular-material/angular-material.scss";
 @import "~angular-loading-bar/src/loading-bar.css";
 
 .app {
   height: 100%;
-}
-
-.primary-color {
-   * {
-    color: #1c9ccd;
-  }
-}
-
-.header {
-  margin-top: 50px;
-  text-align: center;
-  @media (max-width: 575px) { 
-    h1 {
-      font-size: 3.0rem;
-    }
-    p {
-      font-size: 1.0rem;
-    }
-  }
-  .jumbotron {
-    background-color: transparent;
-  }
-  h1 {
-    font-weight: bold;
-  }
 }

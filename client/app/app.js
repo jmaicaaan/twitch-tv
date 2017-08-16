@@ -1,21 +1,22 @@
 import angular from 'angular';
 import ngResource from 'angular-resource';
 import ngAnimate from 'angular-animate';
+import ngAria from 'angular-aria';
+import ngMaterial from 'angular-material';
 import uiRouter from '@uirouter/angularjs';
 import Common from './common/common';
 import Components from './components/components';
 import AppComponent from './app.component';
-import uiBootstrap from 'angular-ui-bootstrap';
 import ngLoadingBar from 'angular-loading-bar';
 import 'normalize.css';
 import 'animate.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
 
 angular.module('app', [
     ngResource,
     ngAnimate,
+    ngAria,
+    ngMaterial,
     ngLoadingBar,
-    uiBootstrap,
     uiRouter,
     Common,
     Components
