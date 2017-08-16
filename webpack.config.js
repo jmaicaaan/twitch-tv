@@ -10,6 +10,7 @@ module.exports = {
       { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: "ng-annotate-loader!babel-loader" },
       { test: /\.html$/, loader: "raw-loader" },
       { test: /\.ejs$/, loader: "ejs-loader" },
+      { test: /\.pug$/, loader: ["raw-loader", "pug-html-loader"] },
       { test: /\.(scss|sass)$/, loader: "style-loader!css-loader!sass-loader" },
       { test: /\.css$/, loader: "style-loader!css-loader" },
       { test: /\.(gif|jpe?g|png|ico)$/, loader: "url-loader" },
