@@ -79,7 +79,7 @@ gulp.task('serve', () => {
     // application entry point
   ].concat(paths.entry);
 
-  var compiler = webpack(config);
+  const compiler = webpack(config);
 
   serve({
     port: process.env.PORT || 3000,
@@ -158,7 +158,7 @@ gulp.task('directive', () => {
 });
 
 gulp.task('clean', (cb) => {
-  del([paths.dest]).then(function (paths) {
+  del([paths.dest]).then((paths) => {
     gutil.log("[clean]", paths);
     cb();
   })
