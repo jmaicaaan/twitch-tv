@@ -30,10 +30,17 @@ module.exports = function (config) {
       devtool: 'inline-source-map',
       module: {
         loaders: [
-          { test: /\.js/, exclude: [/app\/lib/, /node_modules/], loader: 'babel' },
-          { test: /\.html$/, loader: 'raw' },
-          { test: /\.(scss|sass)$/, loader: 'style!css!sass' },
-          { test: /\.css$/, loader: 'style!css' }
+          { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: "ng-annotate-loader!babel-loader" },
+          { test: /\.html$/, loader: "raw-loader" },
+          { test: /\.ejs$/, loader: "ejs-loader" },
+          { test: /\.pug$/, loader: ["raw-loader", "pug-html-loader"] },
+          { test: /\.(scss|sass)$/, loader: "style-loader!css-loader!sass-loader" },
+          { test: /\.css$/, loader: "style-loader!css-loader" },
+          { test: /\.(gif|jpe?g|png|ico)$/, loader: "url-loader" },
+          { test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
+          { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/octet-stream" },
+          { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader" },
+          { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" },
         ]
       }
     },

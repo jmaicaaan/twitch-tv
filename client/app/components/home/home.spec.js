@@ -31,8 +31,8 @@ describe('Home', () => {
       });
     });
 
-    it('has a name property', () => { // erase if removing this.name from the controller
-      expect(controller).to.have.property('name');
+    it('has a text property', () => {
+      expect(controller).to.have.property('text');
     });
   });
 
@@ -46,8 +46,8 @@ describe('Home', () => {
       scope.$apply();
     });
 
-    it('has name in template', () => {
-      expect(template.find('h1').html()).to.eq('Found in home.html');
+    it('has Hola Amigo in template', () => {
+      expect(template.find('div').html()).to.eq('Hola Amigo');
     });
 
   });
