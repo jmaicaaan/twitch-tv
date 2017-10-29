@@ -3,6 +3,8 @@ class <%= upCaseName %>Controller {
     "ngInject";
     this.name = '<%= name %>';
   }
+
+  $onInit = () => {};
 }
 
 export default <%= upCaseName %>Controller;
