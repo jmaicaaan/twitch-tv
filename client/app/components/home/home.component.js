@@ -1,6 +1,6 @@
 import template from './home.pug';
 import controller from './home.controller';
-import './home.scss';
+import './home.styl';
 
 let homeComponent = {
   bindings: {},

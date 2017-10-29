@@ -1,6 +1,6 @@
 import template from './<%= name %>.pug';
 import controller from './<%= name %>.controller';
-import './<%= name %>.scss';
+import './<%= name %>.styl';
 
 let <%= name %>Component = {
   bindings: {},
