@@ -13,6 +13,7 @@ module.exports = {
       { test: /\.pug$/, loader: ["raw-loader", "pug-html-loader"] },
       { test: /\.(scss|sass)$/, loader: "style-loader!css-loader!sass-loader" },
       { test: /\.css$/, loader: "style-loader!css-loader" },
+      { test: /\.styl$/, loader: "style-loader!css-loader!stylus-loader" },
       { test: /\.(gif|jpe?g|png|ico)$/, loader: "url-loader" },
       { test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
       { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/octet-stream" },
