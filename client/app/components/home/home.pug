@@ -1,2 +1,12 @@
 div(ui-view)
-  | {{ $ctrl.text }}
+  md-toolbar()
+    .md-toolbar-tools
+      | Twitch.tv
+  md-content
+    md-list
+      md-list-item.md-2-line(ng-repeat="channel in $ctrl.results" ng-click="$ctrl.viewDetails(channel)")
+        img.md-avatar(alt="{{ channel.display_name }}" ng-src="{{ channel.logo }} ")
+        .md-list-item-text
+          p {{ channel.display_name }}
+          p {{ channel.status }}
+        .status() {{ channel.stream.stream? 'Online' : 'Offline' }}

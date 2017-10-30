@@ -1,0 +1,31 @@
+md-dialog(aria-label="dialog")
+  md-toolbar
+    .md-toolbar-tools
+      img.channel-logo(ng-src="{{ channel.logo }}")
+      h2(flex) Channel Information
+        span.md-caption {{ channel.status }}
+  md-dialog-content
+    .md-dialog-content
+      .details
+        span Channel Name: 
+          span.md-body-1 {{ channel.display_name }}
+        span Game: 
+          span.md-body-1 {{ channel.game }}
+        span Followers: 
+          span.md-body-1 {{ channel.followers }}
+        span Channel Views: 
+          span.md-body-1 {{ channel.views }}
+      .stream
+        span(ng-class="channel.stream.stream? 'online' : 'offline'") Status: 
+          span.md-body-1 {{ channel.stream.stream? 'Online': 'Offline' }}
+        .stream-container(ng-show="channel.stream.stream")
+          span Game: 
+            span.md-body-1 {{ channel.stream.stream.game }}
+          span Viewers: 
+            span.md-body-1 {{ channel.stream.stream.viewers }}
+          img.stream-preview(ng-src="{{ channel.stream.stream.preview.medium }}")
+      span.md-caption Created at {{ channel.created_at }}
+      span.md-caption Last Updated {{ channel.updated_at }}
+  md-dialog-actions
+    span(flex)
+    md-button(ng-href="{{ channel.url }}" target="_blank") Visit Channel

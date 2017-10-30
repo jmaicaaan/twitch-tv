@@ -1,2 +1,30 @@
-.home 
-  border: 1px solid black
+md-content
+  padding: 1.5em
+.status
+  display: flex
+  align-self: center
+md-dialog
+  .md-toolbar-tools
+    h2
+      display: grid
+      grid-template-columns: 1fr
+    img.channel-logo
+      width: 45px
+      height: 45px
+      margin-right: 1em
+.md-dialog-content
+  display: grid 
+  grid-template-columns: 2fr 1fr
+  .details
+    display: flex
+    flex-direction: column
+    span 
+      padding: 0.5em 0
+  .stream
+    .online
+      span.md-body-1
+        color: green 
+    .stream-container
+      display: grid 
+      grid-template-columns: 1fr
+      padding: 0.5em 0
